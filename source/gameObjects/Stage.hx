@@ -42,6 +42,12 @@ class Stage extends FlxTypedGroup<FlxBasic>
 	var upperBoppers:FNFSprite;
 	var bottomBoppers:FNFSprite;
 	var santa:FNFSprite;
+	
+	var mainSky:FNFSprite;
+	var clouds:FNFSprite;
+	var otherBack:FNFSprite;
+	var back:FNFSprite;
+	var building:FNFSprite:
 
 	var bgGirls:BackgroundGirls;
 
@@ -334,6 +340,10 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				bg.scrollFactor.set(0.8, 0.9);
 				bg.scale.set(6, 6);
 				add(bg);
+				
+			case 'city':
+				var mainSky:FNFSprite = new FNFSprite(-420, -380).loadGraphic(Paths.image('backgrounds/' + curStage + '/mainsky'));
+				var clouds:FNFSprite = new FNFSprite(0, -380).loadGraphic(Paths.image('backgrounds/' + curStage + '/sky'));
 
 			default:
 				PlayState.defaultCamZoom = 0.9;
