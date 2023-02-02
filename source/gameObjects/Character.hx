@@ -130,6 +130,20 @@ class Character extends FNFSprite
 				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24);
 
 				playAnim('idle');
+				
+			case 'eren':
+				//stfu im balling
+				tex = Paths.getSparrowAtlas('characters/eren/ErenSheet');
+				frames = tex;
+				animation.addByPrefix('idle', 'idle', 24, false);
+				animation.addByPrefix('singUP', 'up', 24);
+				animation.addByPrefix('singRIGHT', 'right', 24);
+				animation.addByPrefix('singDOWN', 'down', 24);
+				animation.addByPrefix('singLEFT', 'left', 24);
+				animation.addByPrefix('what', 'what', 24);
+
+				playAnim('idle');
+				
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
 				frames = tex;
