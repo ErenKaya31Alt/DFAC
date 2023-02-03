@@ -342,8 +342,34 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				add(bg);
 				
 			case 'city':
+				PlayState.defualtCamZoom = 0.7;
 				var mainSky:FNFSprite = new FNFSprite(-420, -380).loadGraphic(Paths.image('backgrounds/' + curStage + '/mainsky'));
+				mainSky.scrollFactor.set(0.7, 0.7);
+				mainSky.scale.set(2, 2);
+				
 				var clouds:FNFSprite = new FNFSprite(0, -380).loadGraphic(Paths.image('backgrounds/' + curStage + '/sky'));
+				clouds.scrollFactor.set(0.7, 0.7);
+				clouds.scale.set(2, 2);
+				
+				var otherBack:FNFSprite = new FNFSprite(-220, 450).loadGraphic(Paths.image('backgrounds/' + curStage + '/other_back'));
+				otherBack.scrollFactor.set(0.5, 0.5);
+				otherBack.scale.set(2, 2);
+				
+				var back:FNFSprite = new FNFSprite(-220, 600).loadGraphic(Paths.image('backgrounds/' + curStage + '/back'));
+				back.scale.set(2, 2);
+				
+				var building:FNFSprite = new FNFSprite(-220, -380).loadGraphic(Paths.image('backgrounds/' + curStage + '/building'));
+				building.scale.set(2, 2);
+				building.scrollFactor.set(0.7, 0.7);
+				
+				add(mainSky);
+				add(clouds);
+				add(building);
+				add(otherBack);
+				add(back);
+				
+				if (PlayState.SONG.song.toLowerCase() == 'hard-bass')
+					PlayState.defaultCamZoom =+ 0.1;
 
 			default:
 				PlayState.defaultCamZoom = 0.9;
