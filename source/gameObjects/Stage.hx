@@ -47,7 +47,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 	var clouds:FNFSprite;
 	var otherBack:FNFSprite;
 	var back:FNFSprite;
-	var building:FNFSprite:
+	var building:FNFSprite;
 
 	var bgGirls:BackgroundGirls;
 
