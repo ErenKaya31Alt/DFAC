@@ -71,7 +71,7 @@ class Main extends Sprite
 	public static var gameVersion:String = '0.2.4.2';
 
 	var zoom:Float = -1; // If -1, zoom is automatically calculated to fit the window dimensions.
-	var skipSplash:Bool = true; // Whether to skip the flixel splash screen that appears in release mode.
+	var skipSplash:Bool = false; // Whether to skip the flixel splash screen that appears in release mode.
 	var infoCounter:InfoHud; // initialize the heads up display that shows information before creating it.
 
 	// heres gameweeks set up!
@@ -84,42 +84,11 @@ class Main extends Sprite
 		[ [songs to use], [characters in songs], [color of week], name of week ]
 	**/
 	public static var gameWeeks:Array<Dynamic> = [
-		[['Tutorial'], ['gf'], [FlxColor.fromRGB(129, 100, 223)], 'Funky Beginnings'],
 		[
-			['Bopeebo', 'Fresh', 'Dadbattle'],
-			['dad', 'dad', 'dad'],
+			['Stranger', 'Hard Bass', 'Anoly'],
+			['eren', 'eren', 'eren'],
 			[FlxColor.fromRGB(129, 100, 223)],
-			'vs. DADDY DEAREST'
-		],
-		[
-			['Spookeez', 'South', 'Monster'],
-			['spooky', 'spooky', 'monster'],
-			[FlxColor.fromRGB(30, 45, 60)],
-			'Spooky Month'
-		],
-		[
-			['Pico', 'Philly-Nice', 'Blammed'],
-			['pico'],
-			[FlxColor.fromRGB(111, 19, 60)],
-			'vs. Pico'
-		],
-		[
-			['Satin-Panties', 'High', 'Milf'],
-			['mom'],
-			[FlxColor.fromRGB(203, 113, 170)],
-			'MOMMY MUST MURDER'
-		],
-		[
-			['Cocoa', 'Eggnog', 'Winter-Horrorland'],
-			['parents-christmas', 'parents-christmas', 'monster-christmas'],
-			[FlxColor.fromRGB(141, 165, 206)],
-			'RED SNOW'
-		],
-		[
-			['Senpai', 'Roses', 'Thorns'],
-			['senpai', 'senpai', 'spirit'],
-			[FlxColor.fromRGB(206, 106, 169)],
-			"hating simulator ft. moawling"
+			'First Meething With Eren'
 		],
 	];
 
@@ -260,7 +229,7 @@ class Main extends Sprite
 		dateNow = StringTools.replace(dateNow, " ", "_");
 		dateNow = StringTools.replace(dateNow, ":", "'");
 
-		path = "./crash/" + "FE_" + dateNow + ".txt";
+		path = "./crash/" + "VSEren_" + dateNow + ".txt";
 
 		for (stackItem in callStack)
 		{
@@ -273,7 +242,7 @@ class Main extends Sprite
 			}
 		}
 
-		errMsg += "\nUncaught Error: " + e.error + "\nPlease report this error to the GitHub page: https://github.com/Yoshubs/Forever-Engine";
+		errMsg += "\nUncaught Error: " + e.error + "\nSorry bru\n this is not my problem lmfao";
 
 		if (!FileSystem.exists("./crash/"))
 			FileSystem.createDirectory("./crash/");
