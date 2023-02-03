@@ -75,7 +75,7 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 		add(iconP2);
 
 		scoreBar = new FlxText(FlxG.width / 2, healthBarBG.y + 40, 0, scoreDisplay, 20);
-		scoreBar.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreBar.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		updateScoreText();
 		scoreBar.scrollFactor.set();
 		add(scoreBar);
@@ -83,9 +83,9 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 		// small info bar, kinda like the KE watermark
 		// based on scoretxt which I will set up as well
 		var infoDisplay:String = CoolUtil.dashToSpace(PlayState.SONG.song) + ' - ' + CoolUtil.difficultyFromNumber(PlayState.storyDifficulty);
-		var engineDisplay:String = "Forever Engine BETA v" + Main.gameVersion;
+		var engineDisplay:String = "Vs Eren DEMO v1.0";
 		var engineBar:FlxText = new FlxText(0, FlxG.height - 30, 0, engineDisplay, 16);
-		engineBar.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		engineBar.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		engineBar.updateHitbox();
 		engineBar.x = FlxG.width - engineBar.width - 5;
 		engineBar.scrollFactor.set();
