@@ -21,8 +21,7 @@ class InfoHud extends TextField
 
 	// display info
 	public static var displayFps = true;
-	public static var displayMemory = true;
-	public static var displayExtra = true;
+	public static var displayMemory = true; // told you im not adding state shower fuck you
 
 	// I also like to set them up so that you can call on them later since they're static
 	// anyways heres some other stuff I didn't write most of this so its just standard fps stuff
@@ -49,7 +48,7 @@ class InfoHud extends TextField
 		width = Main.gameWidth;
 		height = Main.gameHeight;
 
-		text = "FPS: \nState: \nMemory:";
+		text = "FPS: \nMemory:"; //im never adding state fuck you
 
 		cacheCount = 0;
 		currentTime = 0;
@@ -86,12 +85,10 @@ class InfoHud extends TextField
 			text += "FPS: " + currentFPS + "\n";
 			cacheCount = times.length;
 		}
-		if (displayExtra)
-			text += "State: " + Main.mainClassState + "\n";
 		if (displayMemory)
 		{
 			memoryUsage = Math.round(System.totalMemory / (1e+6)); // division to convey the memory usage in megabytes
-			text += "Memory: " + memoryUsage + " mb";
+			text += "CPU: " + memoryUsage + " mb";
 			// mb stands for my bad
 		}
 	}
