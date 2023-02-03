@@ -367,9 +367,6 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				add(building);
 				add(otherBack);
 				add(back);
-				
-				if (PlayState.SONG.song.toLowerCase() == 'hard-bass')
-					PlayState.defaultCamZoom =+ 0.1;
 
 			default:
 				PlayState.defaultCamZoom = 0.9;
